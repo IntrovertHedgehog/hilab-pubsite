@@ -7,7 +7,7 @@ const areas = [
   {
     id: 1,
     color: "",
-    icon: "flaticon-microscope",
+    icon: "flaticon-heart",
     title: (
       <>
         Wellness
@@ -23,7 +23,7 @@ const areas = [
   {
     id: 2,
     color: "pink-icon",
-    icon: "flaticon-thinking",
+    icon: "flaticon-bacteria",
     title: (
       <>
         Disease Management
@@ -39,7 +39,7 @@ const areas = [
   {
     id: 3,
     color: "green-icon",
-    icon: "flaticon-24-hours-1",
+    icon: "flaticon-thinking",
     title: (
       <>
         Cognitive Decline

@@ -16,8 +16,8 @@ const About = () => {
       <AboutArea />
       {/*<Counter />*/}
       <Specialists />
-      <NavTab />
-      <Team />
+      {/*<NavTab />*/}
+      {/*<Team />*/}
       <FooterFour />
     </>
   );
