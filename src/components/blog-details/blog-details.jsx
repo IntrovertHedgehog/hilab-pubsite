@@ -8,8 +8,8 @@ const BlogDetails = () => {
   return (
     <>
       <HeaderTwo />
-      <Banner />
-      <PostBoxDetails />
+      {/* <Banner /> */}
+      <PostBoxDetails id={1} />
       <FooterFour />
     </>
   );

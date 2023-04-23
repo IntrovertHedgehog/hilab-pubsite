@@ -9,9 +9,9 @@ const TeamOne = () => {
   return (
     <>
       <HeaderTwo />
-      <BannerTeamOne />
+      {/* <BannerTeamOne /> */}
       <TeamArea />
-      <DirectContactUs />
+      {/* <DirectContactUs /> */}
       <FooterFour />
     </>
   );

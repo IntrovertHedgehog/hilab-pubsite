@@ -1,46 +1,46 @@
 import Link from "next/link";
 import React from "react";
 
-// category_data
-const category_data = [
+// name_data
+const people = [
   {
-    category: "Chemistry",
-    blog_item: "03",
+    name: "Low Liang Leng",
   },
   {
-    category: "Forensic science",
-    blog_item: "07",
+    name: "Ong Zhi Quan",
   },
   {
-    category: "Gemological",
-    blog_item: "09",
+    name: "Ong Zhi Peng",
   },
   {
-    category: "COvid Analysis",
-    blog_item: "01",
+    name: "Ma Pengfei",
   },
   {
-    category: "Becteriology",
-    blog_item: "00",
+    name: "Poh Yi Long",
   },
   {
-    category: "Angiosperm",
-    blog_item: "26",
+    name: "Fu Yisi",
   },
+  {
+    name: "Xu Ping",
+  },
+  {
+    name: "Le Van Minh",
+  }
 ];
 
 const Category = () => {
   return (
     <>
       <div className="sidebar__widget mb-40">
-        <h3 className="sidebar__widget-title mb-25">Category</h3>
+        <h3 className="sidebar__widget-title mb-25">Peole</h3>
         <div className="sidebar__widget-content">
           <ul>
-            {category_data.map((item, i) => (
+            {people.map((item, i) => (
               <li key={i}>
                 <Link href="/blog-details">
-                  {item.category}
-                  <span>{item.blog_item}</span>
+                  {item.name}
+                  <i className="fa-regular fa-user"></i>
                 </Link>
               </li>
             ))}
