@@ -29,27 +29,6 @@ const PostBoxDetails = () => {
                     <div className="row">
                       <div className="col-lg-12">
                         <div className="postbox__content-area pb-20">
-                          <div className="postbox__meta mb-40">
-                            <span>
-                              <Link href="/team-details">
-                                <i className="fa-regular fa-user"></i> Alextina
-                              </Link>
-                            </span>
-                            <span>
-                              <i className="fa-regular fa-clock"></i> Dec 28,
-                              2022
-                            </span>
-                            <span>
-                              <a href="#">
-                                <i className="fa-regular fa-message-dots"></i>{" "}
-                                (04) Coments
-                              </a>
-                            </span>
-                            <span>
-                              <i className="fa-light fa-eye"></i> 1,526 views
-                            </span>
-                          </div>
-
                           <h3 className="postbox__title mb-35">
                             <Link href="/blog-details">
                               Lavoratories used for scientic reseach take many

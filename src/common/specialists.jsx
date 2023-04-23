@@ -107,7 +107,7 @@ const Specialists = () => {
               </div>
             ))}
           </div>
-          <div className="row text-center">
+          {/* <div className="row text-center">
             <div className="col-lg-12">
               <div className="tp-choose-option">
                 <span>
@@ -117,8 +117,8 @@ const Specialists = () => {
                   </Link>
                 </span>
               </div>
-            </div>
-          </div>
+            </div> 
+            </div> */}
         </div>
       </section>
     </>
