@@ -11,7 +11,7 @@ const TeamDetails = () => {
       <HeaderTwo />
       <Banner />
       <TeamDetailsArea />
-      <DirectContactUs />
+      {/* <DirectContactUs /> */}
       <FooterFour />
     </>
   );

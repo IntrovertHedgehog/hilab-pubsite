@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
-
+import { useRouter } from 'next/router';
+import team_one_data from "@/data/team-one-data";
 
 // team_info data 
 const team_info = [
@@ -147,6 +148,9 @@ const team_info = [
   },
 ];
 const TeamDetailsArea = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  const member = team_one_data.filter(m => m.id == Number(id))[0];
   return (
     <>
       <section className="team-details-area pt-130 pb-70">
@@ -155,7 +159,7 @@ const TeamDetailsArea = () => {
             <div className="col-lg-5 col-md-6">
               <div className="tp-team-dtls__thumb mb-50">
                 <img
-                  src="/assets/img/team/team-details-01.jpg"
+                  src={member?.img}
                   alt="team-thumb"
                 />
               </div>
@@ -163,28 +167,23 @@ const TeamDetailsArea = () => {
             <div className="col-lg-4 col-md-6">
               <div className="tp-team-dtls__content mt-50 mb-50">
                 <h4 className="tp-team-dtls__title mb-10">
-                  <Link href="/team-1">Cameron Williamson</Link>
+                  <Link href="/team-1">{member?.designation}</Link>
                 </h4>
-                <span className="mb-35">Genetic Specialist</span>
-                <p>
-                  Providing insight-driven transformation to <br />
-                  investment banks, wealth and asset mana,
-                  <br /> exchanges, Finance
-                </p>
-                <div className="tp-team-dtls__info">
+                <span className="mb-35">{member?.title}</span>
+                <div className="tp-team-dtls__info mt-130">
                   <ul>
                     <li>
-                      Expertise: <span>Genetic Specialist</span>
+                      Expertise: <span>Place Holder</span>
                     </li>
                     <li>
-                      Experience: <span>15 Years</span>
+                      Experience: <span>Place Holder</span>
                     </li>
                     <li>
                       E-mail:{" "}
                       <span>
                         <a href="mailto:webmail.info@gmail.com">
                           {" "}
-                          webmail.info@gmail.com
+                          example@email.com
                         </a>
                       </span>
                     </li>
@@ -215,167 +214,7 @@ const TeamDetailsArea = () => {
                 <h4 className="tp-team-dtls-text__title mb-30">
                   Personal Experience
                 </h4>
-                <p>
-                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                  accusantium doloremque laudantium, totam rem aperiam, eaque
-                  ipsa quae ab illo inventore veritatis et quasi architecto
-                  beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem
-                  quia voluptas sit aspernatur aut odit aut fugit, sed quia
-                  consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt. Neque porro quisquam est, qui dolorem ipsum quia
-                  dolor sit amet.
-                </p>
-                <p>
-                  Must explain to you how all this mistaken idea of denouncing
-                  works pleasure and praising uts pain was born and I will gives
-                  you a itself completed account of the system, and sed expounds
-                  the ut actual teachings of that greater sed explores truth.
-                  Denouncing works pleasures and praising pains was us born and
-                  I will gives you a completed ut workers accounts of the
-                  system. sit aspernatur aut odit aut fugit, sed quia
-                  consequuntur magni dolores eos qui ratione voluptatem sequi
-                  nesciunt.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="tp-team-dtls-item mb-50 mt-35 wow fadeInUp"
-                data-wow-delay=".2s"
-              >
-                <h4 className="tp-team-dtls-item__title mb-25">Skills</h4>
-                <p>
-                  Must explain to you how all praising uts pain <br />
-                  was born and I will gives you a itself completed <br />
-                  account of the system, and sed expounds the <br /> ut actual
-                  teachings of that greater
-                </p>
-                <div className="tp-team-dtls-item__list">
-                  <ul>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Extramural Funding
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Bacteria Markers
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>In aliquet dui nec
-                      lectus
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Extramural Funding
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Bacteria Markers
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="tp-team-dtls-item mb-50 mt-35 ml-40 wow fadeInUp"
-                data-wow-delay=".4s"
-              >
-                <h4 className="tp-team-dtls-item__title mb-25">Education</h4>
-                <p>
-                  Must explain to you how all praising uts pain <br />
-                  was born and I will gives you a itself completed <br />
-                  account of the system, and sed expounds the <br /> ut actual
-                  teachings of that greater
-                </p>
-                <div className="tp-team-dtls-item__list">
-                  <ul>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Extramural Funding
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Bacteria Markers
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>In aliquet dui nec
-                      lectus
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Extramural Funding
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Bacteria Markers
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 col-md-6">
-              <div
-                className="tp-team-dtls-item mb-50 mt-35 ml-75 wow fadeInUp"
-                data-wow-delay=".6s"
-              >
-                <h4 className="tp-team-dtls-item__title mb-25">Awards</h4>
-                <p>
-                  Must explain to you how all praising uts pain <br />
-                  was born and I will gives you a itself completed <br />
-                  account of the system, and sed expounds the <br /> ut actual
-                  teachings of that greater
-                </p>
-                <div className="tp-team-dtls-item__list">
-                  <ul>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Extramural Funding
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Bacteria Markers
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>In aliquet dui nec
-                      lectus
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Extramural Funding
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Bacteria Markers
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                    <li>
-                      <i className="fa-solid fa-check"></i>Nam nec mi euismod
-                      euismod
-                    </li>
-                  </ul>
-                </div>
+                {member?.writeup.map(w => (<p>{w}</p>))}
               </div>
             </div>
           </div>
