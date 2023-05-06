@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import bg from "@/../public/assets/img/banner/breadcrumb-01.jpg";
 
 const Banner = () => {
   return (
@@ -7,21 +8,14 @@ const Banner = () => {
       <section
         className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
         style={{
-          backgroundImage: `url(/assets/img/banner/breadcrumb-01.jpg)`,
+          backgroundImage: `url(${bg.src})`,
         }}
       >
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6 col-md-7 col-12">
               <div className="tp-breadcrumb">
-                <h2 className="tp-breadcrumb__title">Services- 01</h2>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-5 col-12">
-              <div className="tp-breadcrumb__link d-flex align-items-center">
-                <span>
-                  Bioxlab : <Link href="/service"> Services</Link>
-                </span>
+                <h2 className="tp-breadcrumb__title">Grants & Awards</h2>
               </div>
             </div>
           </div>

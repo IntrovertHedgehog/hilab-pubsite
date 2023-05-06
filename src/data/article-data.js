@@ -1,4 +1,6 @@
 // article data like this 
+import React from "react";
+
 const article_data = [
   {
     id: 1,

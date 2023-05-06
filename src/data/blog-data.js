@@ -1,3 +1,5 @@
+import React from "react";
+
 const blog_data = [
   {
     id: 1,

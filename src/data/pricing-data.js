@@ -1,3 +1,5 @@
+import React from "react";
+
 const pricing_data = [
   {
     id: 1,

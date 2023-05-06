@@ -1,3 +1,5 @@
+import React from "react";
+
 const service_data = [
   {
     id: 1,

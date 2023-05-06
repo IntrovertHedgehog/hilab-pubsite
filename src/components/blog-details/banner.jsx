@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import bg from "@/../public/assets/img/banner/breadcrumb-01.jpg"
 
 const Banner = () => {
   return (
@@ -7,7 +8,7 @@ const Banner = () => {
       <section
         className="breadcrumb__area pt-100 pb-120 breadcrumb__overlay"
         style={{
-          backgroundImage: `url(/assets/img/banner/breadcrumb-01.jpg)`,
+          backgroundImage: `url(${bg.src})`,
         }}
       >
         <div className="container">

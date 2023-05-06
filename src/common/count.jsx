@@ -1,3 +1,5 @@
+import React from "react";
+
 import { useState } from "react";
 import CountUp from "react-countup";
 import { InView } from "react-intersection-observer";

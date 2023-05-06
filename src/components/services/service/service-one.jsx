@@ -14,7 +14,6 @@ const ServiceOne = () => {
       <Banner />
       <ServiceArea />
       <Specialists />
-      <PricingArea />
       <DirectContactUs />
       <FooterFour />
     </>

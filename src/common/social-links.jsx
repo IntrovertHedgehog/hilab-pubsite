@@ -1,3 +1,5 @@
+import React from "react";
+
 const social_links = [
   {
     link: "https://www.youtube.com/",
