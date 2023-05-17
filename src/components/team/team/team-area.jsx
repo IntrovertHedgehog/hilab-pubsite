@@ -1,8 +1,78 @@
 import team_one_data from "@/data/team-one-data";
 import React from "react";
 import styles from "./team.module.css";
+import Link from "next/link";
 
 const quoteStyle = { color: "gray", fontSize: "1.3rem" };
+
+const TeamGroup = (props) => {
+  const group = props.group;
+  return (
+    <div>
+      <h4 style={{textAlign: "center"}} className="mb-35">{group.group}</h4>
+      <div className="row" style={{ justifyContent: "center" }}>
+        {group.members.map(item => (
+          <div className="td-col-xl-5 col-lg-3 col-md-4">
+          <div className={styles.tdSingleTeamMemberThree}>
+            <div className={styles.teamThreeOverlay}></div>
+            <Link
+              href={{ pathname: "team-details", query: { id: item.id } }}
+              className={styles.tdMemberThreeImgWrapper}
+            >
+              <div
+                className={styles.tdTeamThreeImg}
+                style={{
+                  backgroundImage: `url(${item.img})`,
+                }}
+              ></div>
+            </Link>
+
+            <div className={styles.tdTeamThreeContent}>
+              <Link
+                href={{
+                  pathname: "team-details",
+                  query: { id: item.id },
+                }}
+              >
+                <span className={styles.tdMemberDesignationThree}>
+                  {item.title}
+                </span>
+
+                <h3 className={styles.tdMemberThreeName}>{item.designation}</h3>
+              </Link>
+
+              <div className={styles.tdTeamMemberSocial}>
+                <ul className="td-list-style td-list-inline">
+                  <li style={{ width: "fit-content" }}>
+                    <a target="_blank" href="#">
+                      <i className="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li style={{ width: "fit-content" }}>
+                    <a target="_blank" href="#">
+                      <i className="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li style={{ width: "fit-content" }}>
+                    <a target="_blank" href="#">
+                      <i className="fab fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li style={{ width: "fit-content" }}>
+                    <a target="_blank" href="#">
+                      <i className="fab fa-pinterest-p"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const TeamArea = () => {
   return (
@@ -25,63 +95,9 @@ const TeamArea = () => {
               </div>
             </div>
           </div>
-          <div className="row" style={{ justifyContent: "center" }}>
-            {team_one_data.map((item) => (
-              <div className="td-col-xl-5 col-lg-3 col-md-4">
-                <div className={styles.tdSingleTeamMemberThree}>
-                  <div className={styles.teamThreeOverlay}></div>
-                  <a
-                    href={`/team-details?id=${item.id}`}
-                    className={styles.tdMemberThreeImgWrapper}
-                  >
-                    <div
-                      className={styles.tdTeamThreeImg}
-                      style={{
-                        backgroundImage: `url(${item.img})`,
-                      }}
-                    ></div>
-                  </a>
-
-                  <div className={styles.tdTeamThreeContent}>
-                    <a href={`/team-details?id=${item.id}`}>
-                      <span className={styles.tdMemberDesignationThree}>
-                        {item.title}
-                      </span>
-
-                      <h3 className={styles.tdMemberThreeName}>
-                        {item.designation}
-                      </h3>
-                    </a>
-
-                    <div className={styles.tdTeamMemberSocial}>
-                      <ul className="td-list-style td-list-inline">
-                        <li style={{ width: "fit-content" }}>
-                          <a target="_blank" href="#">
-                            <i className="fab fa-facebook-f"></i>
-                          </a>
-                        </li>
-                        <li style={{ width: "fit-content" }}>
-                          <a target="_blank" href="#">
-                            <i className="fab fa-twitter"></i>
-                          </a>
-                        </li>
-                        <li style={{ width: "fit-content" }}>
-                          <a target="_blank" href="#">
-                            <i className="fab fa-linkedin-in"></i>
-                          </a>
-                        </li>
-                        <li style={{ width: "fit-content" }}>
-                          <a target="_blank" href="#">
-                            <i className="fab fa-pinterest-p"></i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          {team_one_data.map((group) => (
+            <TeamGroup group={group} />
+          ))}
         </div>
       </section>
     </>

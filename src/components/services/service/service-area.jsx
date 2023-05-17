@@ -76,7 +76,7 @@ const ServiceArea = () => {
             </div>
           </div>
           {ServiceOneData.map((subsection) => (
-            <AwardSection title={subsection.title} items={subsection.items} />
+            <AwardSection key={subsection.id} title={subsection.title} items={subsection.items} />
           ))}
         </div>
       </section>

@@ -6,12 +6,13 @@ import RecentPost from "../blog/recent-post";
 import Tags from "../blog/tags";
 import CommentForm from "../forms/comment-form";
 import research_data from "@/data/research-data";
+import { useRouter } from "next/router";
 
-const PostBoxDetails = (props) => {
-  const projectData = research_data.filter((p) => p.id == props.id)[0];
-
-  console.log(projectData);
-
+const PostBoxDetails = () => {
+  const router = useRouter();
+  const { id } = router.query;
+  const projectData = research_data.filter(p => p.id === Number(id))[0];
+  
   return (
     <>
       <div
@@ -35,10 +36,10 @@ const PostBoxDetails = (props) => {
                         <div className="postbox__content-area pb-20">
                           <h3 className="postbox__title mb-35">
                             <Link href="#">
-                              {projectData.title}
+                              {projectData?.title}
                             </Link>
                           </h3>
-                          {projectData.content.map((c) => (
+                          {projectData?.content?.map((c) => (
                             <p>{c}</p>
                           ))}
                         </div>
@@ -81,9 +82,7 @@ const PostBoxDetails = (props) => {
             </div>
             <div className="col-xxl-4 col-xl-4 col-lg-5 col-md-12">
               <div className="sidebar__wrapper pl-25 pb-50">
-                {/* <BlogSearch /> */}
                 <Category />
-                {/* <RecentPost /> */}
                 <Tags />
               </div>
             </div>

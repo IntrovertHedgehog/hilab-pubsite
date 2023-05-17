@@ -34,7 +34,7 @@ const ResearchArea = () => {
                     <p>{item.des}</p>
                   </div>
                   <div style={{flexGrow: 1}}></div>
-                  <Link href="/services-3" className="research-item__btn">
+                  <Link href={{pathname: "blog-details", query: {id: item.id}}} className="research-item__btn">
                     Read More
                   </Link>
                 </div>
