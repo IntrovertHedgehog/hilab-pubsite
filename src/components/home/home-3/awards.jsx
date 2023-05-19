@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import home_work_data from "@/data/home_work_data";
+import home_awards_data from "@/data/home_awards_data";
 
-const Blog = () => {
+const Awards = () => {
   return (
     <>
       <section
@@ -13,32 +13,19 @@ const Blog = () => {
           <div className="row align-items-center">
             <div className="col-md-8 col-12">
               <div className="tp-section mb-20">
-                <h3 className="tp-section__title mb-60">Our Works</h3>
+                <h3 className="tp-section__title mb-60">Grants & Awards</h3>
               </div>
             </div>
             <div className="col-md-4 col-12">
               <div className="tp-blog-btn mb-30">
-                <Link href="/blog" className="tp-btn-second">
-                  All Projects
+                <Link href="/service" className="tp-btn-second">
+                  All Grants & Awards
                 </Link>
               </div>
             </div>
-            <div className="col-md-8 col-12">
-              <p>
-                We aim to develop health-information systems that leverage the
-                technological advancements in Internet of Things (IoT) to
-                improve the delivery of safe, high-quality healthcare services.
-              </p>
-              <p>
-                Our initiatives are designed to address the various needs and
-                challenges that individuals may encounter throughout their
-                health journey, including wellness, disease management,
-                cognitive decline prevention, and institutional and home care.
-              </p>
-            </div>
           </div>
           <div className="row">
-            {home_work_data.map((item) => (
+            {home_awards_data.map((item) => (
               <div key={item.id} className="col-xxl-4 col-lg-6 col-md-6">
                 <div
                   className={`blogthumb mb-30 ${item.color} wow fadeInUp`}
@@ -50,12 +37,7 @@ const Blog = () => {
                 >
                   <div className="blogitem">
                     <div className="fix inner-blog-wrap">
-                      <div className="blogitem__avata-part">
-                        <div className="blogitem__medi">
-                          <Link href="/shop">{item.category}</Link>
-                        </div>
-                      </div>
-                      <div className="blogitem__title-area p-relative">
+                      <div className="p-relative">
                         <h5 className="blogitem__title mb-20">
                           <Link href="/blog-details">{item.title}</Link>
                         </h5>
@@ -75,4 +57,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Awards;

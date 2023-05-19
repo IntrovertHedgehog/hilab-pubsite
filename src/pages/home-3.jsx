@@ -8,7 +8,7 @@ const index = () => {
   return (
     <Wrapper>
       <LayoutThree>
-      <SEO pageTitle="Home Three" />
+        <SEO pageTitle="Home Three" />
         <Home_Three />
       </LayoutThree>
     </Wrapper>
